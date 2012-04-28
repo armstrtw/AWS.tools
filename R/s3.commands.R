@@ -155,3 +155,21 @@ s3.du <- function(bucket,bucket.location="US",human.readable.sizes=TRUE,list.md5
                     )
     system(s3.cmd,intern=TRUE)
 }
+
+
+s3.put.file <- function(file, bucket,bucket.location="US", verbose=FALSE,debug=FALSE,encrypt=FALSE) {
+    check.bucket(bucket)
+    s3.cmd <- paste("s3cmd put",
+                    file,
+                    bucket,
+                    ifelse(encrypt,"--encrypt",""),
+                    paste("--bucket-location",bucket.location),
+                    "--no-progress",
+                    ifelse(verbose,"--verbose",""),
+                    ifelse(debug,"--debug","")
+                    )
+    res <- system(s3.cmd,intern=TRUE)
+    res
+}
+
+
