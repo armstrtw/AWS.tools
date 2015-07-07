@@ -2,6 +2,12 @@
 Introduction
 ************
 
+THIS PACKAGE IS DEPRECATED
+
+PLEASE USE THE NEW PACKAGE WHICH WILL BE DEVELOPED HERE:
+https://github.com/armstrtw/Rawscli
+
+
 :Date: October 5, 2011
 :Authors: Whit Armstrong
 :Contact: armstrong.whit@gmail.com
